@@ -1,0 +1,1 @@
+$SPLUNK_HOME/etc/apps/TA-xlsx-to-splunk/bin/xlsx2splunk.py /path/to/file/ '*.xlsx' 1

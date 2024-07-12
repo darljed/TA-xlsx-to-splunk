@@ -2,8 +2,6 @@
 import json, os, openpyxl, base64, re, sys
 from glob import glob
 
-
-print(sys.argv)
 checkpoint_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)),"cp")
 if(not os.path.exists(checkpoint_dir)):
     os.makedirs(checkpoint_dir)
@@ -91,7 +89,7 @@ if __name__ == "__main__":
                             if(formattedDict):
                                 for data in formattedDict:
                                     source = f"xlsx2splunk::{file}::{sheetname}"
-                                    data['source'] = source
+                                    data['FilePath'] = source
                                     
                                     print(json.dumps(data)) # creates the event
                                     c+=1
@@ -101,6 +99,7 @@ if __name__ == "__main__":
                        
         except Exception as e:
             pass
+            print(e)
     except Exception as e:
         print(e)
     
