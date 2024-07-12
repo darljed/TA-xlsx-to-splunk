@@ -1,0 +1,4 @@
+local/
+metadata/local.meta
+*__pycache__*
+cp/
