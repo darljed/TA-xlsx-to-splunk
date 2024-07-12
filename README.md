@@ -5,18 +5,20 @@ TA for XLSX files
 ## Create a path file to wrap the script execution command
 
 Add three arguments:
-argv[1] = string : <path to file>
+argv[1] = string : `<path to file>`
 example: /path/to/file
 
-argv[2] = string : <wildcard or filename>
+argv[2] = string : `<wildcard or filename>`
 example 1: \*.xlsx
 example 2: reports*.xlsx
 
-argv[3] = integer : <starting row in file>
+argv[3] = integer : `<starting row in file>`
 example: the fields are expected to be on row 7, then value will be (7)
 
 Full Example: 
-filename: input1.path
+
+filename: `input1.path`
+
 content: `$SPLUNK_HOME/etc/apps/TA-xlsx-to-splunk/bin/xlsx2splunk.py /path/to/file/ '*.xlsx' 1`
 
 ## Configure inputs.conf
